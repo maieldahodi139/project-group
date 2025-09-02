@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log in</title>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    </head>
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            padding: 50px 50px 10px 80px;
+            border-bottom: .5px solid rgb(201, 198, 198);
+            display: flex;
+            justify-content:space-between ;
+            align-items: center;
+            margin: auto;
+        }
+        ul{
+            display: flex;
+            gap: 40px;
+        }
+        ul li{
+            list-style: none;
+            text-align: center;
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+
+        }
+        nav h3{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 3%;
+        }
+        nav input{
+            width: 243px;
+            height: 20px;
+            border: none;
+            border-radius: 4px 0px 4px 0px;
+            padding: 7px 12px 7px 20px;
+            background-color: #F5F5F5;
+            font-size: 12px;
+            font-weight: 300;
+            color: gray;
+            margin-bottom: 0;
+        }
+        nav input:hover{
+            border: 1px solid rgb(37, 37, 37);
+            border-radius: 4px;
+            transform: scale(1.05);
+        }
+
+        nav i{
+            border: none;
+            border-radius:0px 4px 0px 4px; 
+            background-color: #F5F5F5;
+            padding: 7px 12px 7px 20px;
+            position: relative;
+            right: 50px;
+        }
+        .search{
+            display: flex;
+        }
+        section{
+            margin: 40px 50px 100px 0px;
+            display: flex;
+            align-items: center;
+            padding-right: 100px;
+            height:100%;
+        }
+        .img-box{
+            width:75% ;
+            /* height: 400px; */
+            background-color: #CBE4E8;
+        }
+        .img-box img{
+            width:100% ; 
+            
+        }
+        
+        form{
+            width: 30%;
+            margin-left: 100px;
+        }
+        section h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 4%;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        section p{
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400px;
+            line-height: 24px;
+           
+
+        }
+        .form input{
+            border: none ;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px; 
+            border-bottom: .5px solid gray;
+            width: 370px;
+            padding :10px 10px 10px 0px;
+            text-align: left;
+            color: gray;
+            margin-top: 20px;
+            /* flex-grow: 1; */
+        }
+        .pass{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .pass button{
+            padding: 10px 45px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background-color:#DB4444 ;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+        .pass p a{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #DB4444;
+            text-decoration: none;
+        }
+        footer {
+             background-color: #000; 
+             color: #fff;
+             padding: 30px;
+             font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+             display: grid;
+             grid-template-columns: repeat(5, 1fr); 
+             gap: 30px;
+             padding: 50px 30px ;
+        }
+
+        .footer-column h3 {
+             margin-bottom: 15px;
+             font-size: 16px;
+             font-weight: 700;
+             line-height: 24px;
+             letter-spacing: 3%;
+             padding: 5px 0px 5px 10px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+             color: #bbb;
+             font-size: 14px;
+             line-height: 1.6;
+             text-decoration: none;
+             display: block;
+             padding: 5px 0px 5px 10px;
+             transition: color 0.3s;
+             text-align: left;
+        }
+
+        .footer-column a:hover {
+             color: #fff;
+        }
+
+       .subscribe-box {
+             display: flex;
+             margin-top: 10px;
+             }
+        .subscribe-box i {
+           background: #111;
+           color: #fff;
+           border: none;
+           padding: 10px;
+           /* position: relative;
+           right: 40px; */
+        }
+
+        .subscribe-box input {
+           padding: 10px;
+           border: none;
+           outline: none;
+           background: #111;
+           color: #fff;
+           border: 1px solid #fff;
+           border-radius: 4px;
+           border-right: none;
+        }
+
+        .subscribe-box input::placeholder {
+           color: #888;
+        }
+        .subscribe-box button{
+         background: #111;  
+         position: relative;
+         right: 30px; 
+         border: 1px solid white;
+         border-radius: 0px 4px 0px 4px;
+         border-left: none;
+        }
+
+        .subscribe-box button:hover {
+         background: #ddd;
+        }
+
+
+       .app-images img {
+        width: 120px;
+        margin: 8px 0;
+        display: block;
+        }
+
+       .social-icons{
+         display: flex;
+         gap: 15px;
+        }
+        .social-icons a {
+        color: #fff;
+        margin-right: 12px;
+        font-size: 18px;
+        transition: color 0.3s;
+        }
+
+       .social-icons a:hover {
+        color: #ff4c4c;
+        }
+
+       .footer-bottom {
+          text-align: center;
+          padding-top: 20px;
+          font-size: 14px;
+          color: #777;
+        }
+     </style>
+    <body>
+     <nav>
+        <h3>Exclusive</h3>
+        <ul>
+            <li> <a href=" ">Home</a></li>
+            <li> <a href=" ">Contact</a></li>
+            <li> <a href=" ">About</a></li>
+            <li> <a href=" ">Sign Up</a></li>
+        </ul>
+        <div class="search">
+        <input type="text" placeholder="What are you looking for? ">
+        <i class="fa-solid fa-magnifying-glass"></i>     
+        </div>  
+     </nav>
+     <section>
+        <div class="img-box">
+         <img src="../image/login.jpg" alt="صورة">
+        </div>
+        <form>
+            <h2>Log in to Exclusive</h2>
+            <p>Enter your details below</p>
+            <div class="form">
+            <input type="text" name="login" placeholder="Email or Phone Number"
+            pattern="(^\+?\d{7,15}$)|(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)">
+            <input type="password"  placeholder="Password">
+            </div>
+            <div class="pass">
+            <button type="submit">Log in</button>
+            <p><a href="">Forget Password ?</a></p>
+            </div>
+        </form>
+            
+     </section>
+     
+      <footer>
+            <div class="footer-container">
+
+                <div class="footer-column">
+                    <h3>Exclusive</h3>
+                    <p>Subscribe</p>
+                    <p>Get 10% off your first order</p>
+                    <div class="subscribe-box">
+                        <input type="email" placeholder="Enter your email">
+                        <button><i class="fa-thin fa-angle-up"></i></button>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+                    <a href="mailto:exclusive@gmail.com">exclusive@gmail.com</a>
+                    <a href="tel:+88015888889999">+88015-88888-9999</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Account</h3>
+                    <a href="#">My Account</a>
+                    <a href="#">Login / Register</a>
+                    <a href="#">Cart</a>
+                    <a href="#">Wishlist</a>
+                    <a href="#">Shop</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Link</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms Of Use</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Download App</h3>
+                    <p>Save $3 with App New User Only</p>
+                    <div class="app-images">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Google Play">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="App Store">
+                    </div>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                © Copyright Rimel 2022. All rights reserved
+            </div>
+        </footer>
+
+    </body>
+
+</html>
