@@ -5,7 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Log in</title>
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/general/constant.css">
+        <link rel="stylesheet" href="../css/general/footer.css">
 
     </head>
      <style>
@@ -45,7 +47,7 @@
             text-decoration: none;
             color: black;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 24px;
 
         }
@@ -163,6 +165,12 @@
             line-height: 24px;
             color: #DB4444;
             text-decoration: none;
+        }
+        input:invalid{
+            border: 1px solid red;
+        }
+         input:required{
+           background-color: #fff;
         }
         footer {
              background-color: #000; 
@@ -295,11 +303,13 @@
             <p>Enter your details below</p>
             <div class="form">
             <input type="text" name="login" placeholder="Email or Phone Number"
-            pattern="(^\+?\d{7,15}$)|(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)">
-            <input type="password"  placeholder="Password">
+            pattern="(^\+?\d{7,15}$)|(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)" required>
+            <input type="password"  placeholder="Password"required>
             </div>
             <div class="pass">
+            <a href="Home.html">   
             <button type="submit">Log in</button>
+            </a> 
             <p><a href="">Forget Password ?</a></p>
             </div>
         </form>

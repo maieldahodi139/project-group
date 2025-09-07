@@ -29,7 +29,7 @@
             text-decoration: none;
             color: black;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 24px;
             text-align: center;
 
@@ -449,9 +449,11 @@
         font-size: 16px;
         color: #fff;
         border-bottom: 1px solid #fff;
-         padding-bottom: 4px;
+        padding-bottom: 4px;
         text-decoration: none;
+        font-weight: bold;
         transition: 0.3s;
+          font-weight: bold;
     }
      .btn-hero:hover {
        color: #db4444;               /* أحمر عند hover */
@@ -510,6 +512,10 @@
           font-size: 14px;
           font-weight: bold;
       }
+      .card a:hover{
+        color: #db4444;               /* أحمر عند hover */
+       border-color: #db4444;
+              }
 
 
       #ps5 {
