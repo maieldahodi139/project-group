@@ -1,4 +1,4 @@
-      * {
+* {
           margin: 0;
           padding: 0;
       }
@@ -70,7 +70,8 @@
             text-decoration: underline;
         }
         nav ul li a.active{ 
-            border-bottom: 2px solid black;
+            /* border-bottom: 2px solid black; */
+            text-decoration: underline;
         }
         
         .search{
@@ -78,7 +79,21 @@
         }
         .nav-left{
             display: flex;
-            /* gap: 10px; */
+        }
+
+        .nav-left div div i {
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            color:white;
+            background-color: #db4444;
+            padding: 5px;
+            text-align: center;
+
+        }
+        .nav-left div div {
+            padding-left: 10px;
         }
        .hero {
           margin: 50px 100px 100px 89px;
